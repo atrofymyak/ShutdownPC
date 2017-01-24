@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane fx:controller="com.controller.MainController"
+	xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
+	styleClass="root">
+	<padding>
+		<Insets top="-50" right="5" bottom="5" left="5" />
+	</padding>
+	
+	<HBox spacing="5">
+		<VBox spacing="5">		
+		  <Label text="Години" GridPane.columnIndex="0" GridPane.rowIndex="0"
+			GridPane.columnSpan="2" />
+		  <ListView  id="hoursView" prefHeight="100" fx:id="hoursView" prefWidth="500" onMouseClicked="#selectHour" />
+		</VBox>  
+		<VBox spacing="5">
+		  <Label text="Хвилини" GridPane.columnIndex="0" GridPane.rowIndex="0"
+			GridPane.columnSpan="2" />		
+		  <ListView  id="minutesView" prefHeight="100" fx:id="minutesView" prefWidth="500" onMouseClicked="#selectMinute" />
+		</VBox>		
+	</HBox>
+	
+	<HBox spacing="15" GridPane.rowIndex="1" alignment="BOTTOM_CENTER" GridPane.columnSpan="4">
+		<Button id="start" fx:id="start" text="ЗАПУСТИТИ" onAction="#startAction" disable="true" />
+		<Button id="cancel" fx:id="cancel" text="ВІДМІНИТИ" onAction="#cancelAction" disable="true" />
+		<Button id="close" text="ВИЙТИ" onAction="#closeAction" />			
+	</HBox>	
+	
+</GridPane>	
